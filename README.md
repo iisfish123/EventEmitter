@@ -32,4 +32,4 @@ e.emit('click')监听触发click成功。</br>
 <li>class A{constructor(){this.a=1} }  相当于  function A(){} A.prototype.a = 1    a属性的定义在原型上</li>
 <li>class A{b(){}} 相当于  function A(){} var objA =  new A() objA.b = function(){}   b属性方法是定义在实例对象上的</li>
 <li>class A{static c = 1}  相当于  function A(){} A.c = 1   c属性是定义在构造函数上的，也就是es6的类上的静态属性</li>
-<li>var a = new A()  a.hasOwnProperty(b) 查看b属性是在实例上，还是在原型上。用来检验上面的几点</li>
+<li>var a = new A()  a.hasOwnProperty(b) 查看b属性是在实例上，还是在原型上。用来检验上面的几点，返回true则属性在实例上，false则在原型上</li>
