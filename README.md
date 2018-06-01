@@ -19,7 +19,7 @@ EventEmitter.prototype.addListener = EventEmitter.prototype.on;所以.off和.rem
 否则返回一个空的数组，然后新建一个对象var listenerWrapper = {listener:listener,time:time}   并push进去刚刚返回的空数组里面。</br>
 最后on方法里面是return this，所以在使用的时候可以是.on().on()的链式操作。</br>
 
-#### 6.trigger方法<b>重点</b></br>
+#### 6.trigger方法(重点)</br>
 e.emit('click')监听触发click成功。</br>
 源码是执行trigger()方法，其内部，真正实现回调函数的执行</br>
 一堆for 和if 不解释，就是拿到events对象内部的'click'事件的回调函数，然后listener.listener.apply(this, args || []);</br>
